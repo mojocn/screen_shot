@@ -1,12 +1,14 @@
 # go+phantomJS图片截取微服务
-##背景
+
+## 背景
+
 - 前端程序员不愿意(技术不行)使用canvs截取图片分享到微信朋友圈
-##准备工作
+## 准备工作
 - *unix系统安装[phantomJS](http://phantomjs.org/download.html)可执行文件,`phantomjs`添加到系统环境变量
 - 检验phantomjs安装是否成功,`在终端中运行$:` `phantomjs`不报错,则安装成功
 - 安装go package [`github.com/benbjohnson/phantomjs`](https://github.com/benbjohnson/phantomjs),主要功能方便go调用phantomJS二进制文件命令
 
-##go调用phantomJS代码解析
+## go调用phantomJS代码解析
 - defer函数捕捉panic
     ```go
     func main() {
@@ -113,7 +115,7 @@
     		panic(err)
     	}}
     ```
-##使用go标准库创建截图微服务
+## 使用go标准库创建截图微服务
 - main.go完成代码
 ```go
     // example of HTTP server that uses the captcha package.
@@ -254,15 +256,10 @@ Cache-Control: no-cache
 
 截图图片地址`localhost:1122/` + `output_uri`
 ```
-
-
-###
+### last
 - todo::图片上传到阿里云oss
 - todo::相同url不重复截图
-
-
-
-## [GitHub源码地址](https://github.com/mojocn/screen_shot)
+- [GitHub源码地址](https://github.com/mojocn/screen_shot)
 
 
 
